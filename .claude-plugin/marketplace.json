@@ -1,0 +1,13 @@
+{
+  "name": "antstackio",
+  "owner": {
+    "name": "AntStack"
+  },
+  "plugins": [
+    {
+      "name": "antstack-claude-plugin",
+      "source": ".",
+      "description": "Structured workflow plugin with specialized agents for project management, backend, and frontend development. Includes git workflow automation, validation commands, and MCP server integrations."
+    }
+  ]
+}
