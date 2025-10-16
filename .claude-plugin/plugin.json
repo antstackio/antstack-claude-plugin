@@ -4,7 +4,8 @@
   "description": "Structured workflow plugin with specialized agents for project management, backend, and frontend development. Includes git workflow automation, validation commands, and MCP server integrations.",
   "author": {
     "name": "AntStack",
-    "email": "connect@antstack.com"
+    "email": "connect@antstack.com",
+    "url": "https://www.antstack.com/"
   },
   "license": "MIT",
   "keywords": [
@@ -22,7 +23,17 @@
   ],
   "repository": "https://github.com/antstackio/antstack-claude-plugin",
   "homepage": "https://github.com/antstackio/antstack-claude-plugin#readme",
-  "commands": "./commands",
-  "agents": "./agents",
+  "commands": [
+    "./commands/git/create-pr.md",
+    "./commands/git/sync-main.md",
+    "./commands/workflow/complete-task.md",
+    "./commands/workflow/start-task.md",
+    "./commands/workflow/validate.md"
+  ],
+  "agents": [
+    "./agents/project-analyzer.md",
+    "./agents/backend-developer.md",
+    "./agents/frontend-developer.md"
+  ],
   "hooks": "./hooks/cleanup-temp-files.json"
 }
