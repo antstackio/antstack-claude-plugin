@@ -1,0 +1,35 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "file=\"$TOOL_INPUT_FILE_PATH\"; if [[ \"$file\" == *.tmp ]] || [[ \"$file\" == *.temp ]] || [[ \"$file\" == debug_* ]] || [[ \"$file\" == test_* ]] || [[ \"$file\" == *progress.md ]]; then echo \"⚠️  Warning: Temporary file created: $file. Remember to clean up before commit.\"; fi"
+          }
+        ]
+      },
+      {
+        "matcher": "Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "file=\"$TOOL_INPUT_FILE_PATH\"; if [[ \"$file\" == *.tmp ]] || [[ \"$file\" == *.temp ]] || [[ \"$file\" == debug_* ]] || [[ \"$file\" == test_* ]] || [[ \"$file\" == *progress.md ]]; then echo \"⚠️  Warning: Temporary file modified: $file. Remember to clean up before commit.\"; fi"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cmd=\"$TOOL_INPUT_COMMAND\"; if [[ \"$cmd\" == *\"git add\"* ]] || [[ \"$cmd\" == *\"git commit\"* ]]; then temp_files=$(find /app/workspace -type f \\( -name '*.tmp' -o -name '*.temp' -o -name 'debug_*' -o -name 'test_*' -o -name 'progress.md' \\) 2>/dev/null | wc -l | tr -d ' '); if [ \"$temp_files\" -gt 0 ]; then echo \"❌ BLOCKED: Found $temp_files temporary file(s). Clean up before commit:\"; find /app/workspace -type f \\( -name '*.tmp' -o -name '*.temp' -o -name 'debug_*' -o -name 'test_*' -o -name 'progress.md' \\) 2>/dev/null; echo \"\"; echo \"Run: rm -f /app/workspace/{*.tmp,*.temp,debug_*,test_*,progress.md}\"; exit 1; fi; fi"
+          }
+        ]
+      }
+    ]
+  }
+}
