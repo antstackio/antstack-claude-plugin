@@ -2,7 +2,7 @@
 
 Structured workflow management for Claude Code with specialized agents, automated git workflows, and validation tools.
 
-## 🚀 Installation
+## Installation
 
 ### Method 1: From GitHub (Recommended)
 
@@ -26,7 +26,7 @@ Structured workflow management for Claude Code with specialized agents, automate
 
 **Prerequisites:** Git, GitHub CLI (`gh`), `GITHUB_TOKEN` environment variable
 
-## 📋 Quick Start
+## Quick Start
 
 ```bash
 # 1. Start task
@@ -44,9 +44,9 @@ Use frontend-developer: Create login form component
 /complete-task
 ```
 
-## ✨ Features
+## Features
 
-### 🤖 Three Specialized Agents
+### Three Specialized Agents
 
 | Agent                  | Model  | Use For                                             |
 | ---------------------- | ------ | --------------------------------------------------- |
@@ -54,7 +54,7 @@ Use frontend-developer: Create login form component
 | **backend-developer**  | Sonnet | AWS Lambda, APIs, databases, authentication         |
 | **frontend-developer** | Sonnet | React, Next.js, UI components, forms                |
 
-### ⚡ Workflow Commands
+### Workflow Commands
 
 - `/start-task <description>` - Initialize task with git workflow
 - `/validate` - Run typecheck, lint, tests, build
@@ -62,24 +62,24 @@ Use frontend-developer: Create login form component
 - `/sync-main` - Sync with remote
 - `/create-pr` - Create pull request
 
-### 🔌 MCP Integrations
+### MCP Integrations
 
-GitHub • Context7 • AWS CDK • AWS Serverless • Playwright
+GitHub • Context7 • AWS CDK • Playwright
 
-### 🪝 Automatic Hooks
+### Automatic Hooks
 
 Warns on temp file creation, blocks commits if temp files exist
 
-## 🔧 Configuration
+## Configuration
 
-### Environment Variables
+### nvironment Variables
 
 ```bash
 export GITHUB_TOKEN="ghp_your_token"
 export AWS_REGION="us-east-1"  # optional
 ```
 
-## 📖 Workflow Example
+## Workflow Example
 
 ```bash
 /start-task Implement notifications
@@ -90,14 +90,14 @@ Use frontend-developer: Build notification UI
 /complete-task
 ```
 
-## 🎯 Best Practices
+## Best Practices
 
 1. **Always use Context7** for library documentation
 2. **Start with project-analyzer** to understand architecture
 3. **Run /validate** before completing tasks
 4. **Let commands handle git** - focus on code
 
-## 🔍 Troubleshooting
+## Troubleshooting
 
 **Commands not working?**
 
@@ -111,15 +111,15 @@ Fix in order: TypeScript → Linting → Tests → Build
 **Git operations failing?**
 Check `GITHUB_TOKEN` and GitHub CLI installation
 
-## 🤝 Contributing
+## Contributing
 
 Issues: https://github.com/antstackio/antstack-claude-plugin/issues
 
-## 📄 License
+## License
 
 MIT
 
-## 📌 Version
+## Version
 
 1.0.0
 
