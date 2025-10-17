@@ -79,15 +79,6 @@ export GITHUB_TOKEN="ghp_your_token"
 export AWS_REGION="us-east-1"  # optional
 ```
 
-### Project Customization
-
-Edit `docs/project-instructions.md` to customize for your project:
-
-- Technology stack
-- Custom workflows
-- Validation commands
-- Branch naming conventions
-
 ## 📖 Workflow Example
 
 ```bash
@@ -119,11 +110,6 @@ Fix in order: TypeScript → Linting → Tests → Build
 
 **Git operations failing?**
 Check `GITHUB_TOKEN` and GitHub CLI installation
-
-## 📚 Documentation
-
-- **Migration Guide**: `MIGRATION.md`
-- **Project Instructions**: `docs/project-instructions.md`
 
 ## 🤝 Contributing
 
