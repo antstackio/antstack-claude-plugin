@@ -33,7 +33,9 @@
   "agents": [
     "./agents/project-analyzer.md",
     "./agents/backend-developer.md",
-    "./agents/frontend-developer.md"
+    "./agents/frontend-developer.md",
+    "./agents/prisma-typescript-library-builder.md",
+    "./agents/nestjs-api-builder.md"
   ],
   "hooks": "./hooks/cleanup-temp-files.json"
 }
