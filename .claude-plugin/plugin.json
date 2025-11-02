@@ -28,7 +28,9 @@
     "./commands/git/sync-main.md",
     "./commands/workflow/complete-task.md",
     "./commands/workflow/start-task.md",
-    "./commands/workflow/validate.md"
+    "./commands/workflow/validate.md",
+    "./commands/init-cdk-lambda.md",
+    "./commands/init-nextjs.md"
   ],
   "agents": [
     "./agents/project-analyzer.md",
